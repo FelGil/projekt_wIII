@@ -19,7 +19,17 @@ $contents = explode("\n", $contents);
     <title>Portfolio - Admin sida</title>
 </head>
 <body>
+
 <header><h1>Portfolio admin</h1></header>
+<nav>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="education.html">Utbildning</a></li>
+            <li><a href="webbpages.html">Webbplatser</a></li>
+            <li><a href="work.html">Erfarenheter</a></li>
+            <li class="visited"><a href="login.php">Logga in</a></li>
+        </ul>
+</nav>
     <div class="container">
         <!--form for login-->
         <section class="loginwrapper">

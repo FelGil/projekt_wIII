@@ -4,6 +4,7 @@ const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass')(require('sass'));
 const babel = require("gulp-babel");
+const imagemin = require('gulp-imagemin');
 
 //Filepaths
 const files = {
@@ -11,6 +12,7 @@ const files = {
     jsPath: "src/js/*.js",
     imagePath: "src/images/*",
     sassPath: "src/sass/*",
+    imagePath: "src/images/*",
     //Admin paths
     adm_phpPath: "src/*.php",
     //credentials
@@ -67,12 +69,12 @@ function watchTask() {
         server: "./pub"
     });
       
-    watch([files.htmlPath, files.jsPath, files.sassPath, files.jsPath, files.adm_phpPath, files.credentialsPath], 
-        parallel(copyHTML, jsTask, sassTask, jsTask, adm_copyPHP_Task, copyCredentials_Task)).on('change',browserSync.reload);
+    watch([files.htmlPath, files.jsPath, files.sassPath, files.jsPath, files.adm_phpPath, files.credentialsPath, files.imagePath], 
+        parallel(copyHTML, jsTask, sassTask, jsTask, adm_copyPHP_Task, copyCredentials_Task,imageTask)).on('change',browserSync.reload);
 }
 
 exports.default = series(
-    parallel(copyHTML, sassTask, jsTask, adm_copyPHP_Task,copyCredentials_Task),
+    parallel(copyHTML, sassTask, jsTask, adm_copyPHP_Task,copyCredentials_Task,imageTask),
     watchTask
 );
 
