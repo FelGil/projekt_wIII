@@ -237,6 +237,15 @@ footer {
     padding: 8px 8px 8px 8px;
 }
 
+#portfolio {
+    margin: 5%;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+    width: 40%;
+}
+
 //***************** Adminpage *****************//
 
 .admin_container {
@@ -432,7 +441,8 @@ input {
     @include button-filled($red-color);
     width: 70px;
     text-decoration: none;
-    color: black;
+    color: white;
     margin-bottom: 10px;
+    margin-left: 2%;
     padding: 8px 8px 8px 8px;
 }

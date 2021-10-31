@@ -272,6 +272,15 @@ footer {
   background-color: #16e5a7;
 }
 
+#portfolio {
+  margin: 5%;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  width: 40%;
+}
+
 .admin_container {
   margin-left: 2%;
   margin-top: 2%;
@@ -443,12 +452,12 @@ input {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
-  background-color: #e74c3c;
+  background-color: #e61a98;
   margin-top: 4px;
   margin-bottom: 4px;
 }
 .btn_del:hover {
-  background-color: #d62c1a;
+  background-color: #b9147a;
 }
 
 .btn_update {
@@ -586,13 +595,14 @@ input {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
-  background-color: #e74c3c;
+  background-color: #e61a98;
   width: 70px;
   text-decoration: none;
-  color: black;
+  color: white;
   margin-bottom: 10px;
+  margin-left: 2%;
   padding: 8px 8px 8px 8px;
 }
 .logoutBtn:hover {
-  background-color: #d62c1a;
+  background-color: #b9147a;
 }

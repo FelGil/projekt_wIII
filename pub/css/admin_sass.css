@@ -184,12 +184,12 @@ input {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
-  background-color: #e74c3c;
+  background-color: #e61a98;
   margin-top: 4px;
   margin-bottom: 4px;
 }
 .btn_del:hover {
-  background-color: #d62c1a;
+  background-color: #b9147a;
 }
 
 .btn_update {
@@ -327,12 +327,12 @@ input {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
-  background-color: #e74c3c;
+  background-color: #e61a98;
   text-decoration: none;
   color: black;
   margin-bottom: 10px;
   padding: 8px 8px 8px 8px;
 }
 .logoutBtn:hover {
-  background-color: #d62c1a;
+  background-color: #b9147a;
 }

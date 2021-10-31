@@ -14,10 +14,10 @@ if(!isset($_SESSION['userid'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/sass.css">
-    <title>Projekt - Adminpage</title>
+    <title>Portfolio - Adminpage</title>
 </head>
 <body>
-<header><h1>Projekt - Adminpage</h1></header>
+<header><h1>Portfolio - Adminpage</h1></header>
 <!-- links to each category to manage -->
 <nav>
     <ul>
