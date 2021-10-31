@@ -34,7 +34,6 @@ $contents = explode("\n", $contents);
                 $user = $loginInfo[0];
                 $password = $loginInfo[1];
                 //$password == $_POST['password']
-                echo $_POST['password'];
                 if($user == $_POST['userid'] && $password == $_POST['password']){
                     
                         header("Location: admin.php");
