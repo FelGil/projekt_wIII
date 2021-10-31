@@ -19,7 +19,7 @@ $button-padding: 15px;
 @mixin respond ($breakpoint) {
 
     @if $breakpoint==smallerscreen {
-       @media only screen and (max-width: 800px) {
+       @media only screen and (max-width: 1000px) {
        @content;
     }
   }

@@ -57,7 +57,7 @@ function getEducations() {
     
     //Addlist header
     listContainer.innerHTML +=
-    `<div class="rowWrapper">
+    `<div class="rowWrapper listheader">
         <div class="adm_col1">
             <b>Lärosäte:</b>
         </div>
@@ -88,16 +88,16 @@ function getEducations() {
             listContainer.innerHTML +=
             `<div class="rowWrapper">
                 <div class="adm_col1">
-                    ${edu.university}
+                <span class="small_listheader">Lärosäte: </span>${edu.university}
                 </div>
                 <div class="adm_col2">
-                    ${edu.course}
+                <span class="small_listheader">Utbildning: </span>${edu.course}
                 </div>
                 <div class="adm_col3">
-                    ${tmp_startdate}
+                <span class="small_listheader">Start datum: </span>${tmp_startdate}
                 </div>
                 <div class="adm_col4">
-                    ${tmp_enddate}
+                <span class="small_listheader">Slut datum: </span>${tmp_enddate}
                 </div>
                 <div class="adm_col5">
                     <button id="${edu.id}" class="btn_del" onClick="deleteEdu(${edu.id})">Radera</button>
@@ -305,7 +305,7 @@ function getPortfolio() {
     listContainer.innerHTML = "";
     //Addlist header
     listContainer.innerHTML +=
-    `<div class="rowWrapper">
+    `<div class="rowWrapper listheader">
         <div class="adm_col1">
             <b>Titel:</b>
         </div>
@@ -327,13 +327,13 @@ function getPortfolio() {
             listContainer.innerHTML +=
             `<div class="rowWrapper">
                 <div class="adm_col1">
-                    ${pof.title}
+                <span class="small_listheader">Titel: </span>${pof.title}
                 </div>
                 <div class="adm_col2">
-                    ${pof.url}
+                <span class="small_listheader">URL: </span><a href="${pof.url}">Länk</a>
                 </div>
                 <div class="adm_col3">
-                    ${pof.description}
+                <span class="small_listheader">Beskrivning: </span>${pof.description}
                 </div>
                 <div class="adm_col5">
                     <button id="${pof.id}" class="btn_del" onClick="deletePof(${pof.id})">Radera</button>
@@ -533,7 +533,7 @@ function getWrkexperience() {
     
     //Addlist header
     listContainer.innerHTML +=
-    `<div class="rowWrapper">
+    `<div class="rowWrapper listheader">
         <div class="adm_col1">
             <b>Arbete:</b>
         </div>
@@ -563,16 +563,16 @@ function getWrkexperience() {
             listContainer.innerHTML +=
             `<div class="rowWrapper">
                 <div class="adm_col1">
-                    ${wrk.employer}
+                <span class="small_listheader">Arbete: </span>${wrk.employer}
                 </div>
                 <div class="adm_col2">
-                    ${wrk.title}
+                <span class="small_listheader">Titel: </span>${wrk.title}
                 </div>
                 <div class="adm_col3">
-                    ${tmp_startdate}
+                <span class="small_listheader">Start datum: </span>${tmp_startdate}
                 </div>
                 <div class="adm_col4">
-                    ${tmp_enddate}
+                <span class="small_listheader">Slut datum: </span>${tmp_enddate}
                 </div>
                 <div class="adm_col5">
                     <button id="${wrk.id}" class="btn_del" onClick="deleteWrk(${wrk.id})">Radera</button>

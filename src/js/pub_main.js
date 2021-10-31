@@ -12,7 +12,7 @@ function getEducations() {
     listContainer[0].innerHTML = "";
     //add a list header
     listContainer[0].innerHTML +=
-    `<div class="rowWrapper">
+    `<div class="rowWrapper listheader">
         <div class="col1">
             <b>Lärosäte:</b>
         </div>
@@ -42,16 +42,16 @@ function getEducations() {
             listContainer[0].innerHTML +=
             `<div class="rowWrapper">
                 <div class="col1">
-                    ${edu.university}
+                    <span class="small_listheader">Lärosäte: </span> ${edu.university}
                 </div>
                 <div class="col2">
-                    ${edu.course}
+                <span class="small_listheader">Utbildning: </span> ${edu.course}
                 </div>
                 <div class="col3">
-                    ${tmp_startdate}
+                <span class="small_listheader">Start datum: </span> ${tmp_startdate}
                 </div>
                 <div class="col4">
-                    ${tmp_enddate}
+                <span class="small_listheader">Slut datum: </span> ${tmp_enddate}
                 </div>
             </div>`;
             
@@ -69,7 +69,7 @@ function getPortfolio() {
     listContainer[0].innerHTML = "";
     //add a list header
     listContainer[0].innerHTML +=
-    `<div class="rowWrapper">
+    `<div class="rowWrapper listheader">
         <div class="web_col1">
             <b>Titel:</b>
         </div>
@@ -91,13 +91,13 @@ function getPortfolio() {
             listContainer[0].innerHTML +=
             `<div class="rowWrapper">
                 <div class="web_col1">
-                    ${pof.title}
+                <span class="small_listheader">Titel: </span>${pof.title}
                 </div>
                 <div class="web_col2">
-                    <a href="${pof.url}" class="list_link">Länk</a>
+                <span class="small_listheader">URL: </span><a href="${pof.url}" class="list_link">Länk</a>
                 </div>
                 <div class="web_col3">
-                    ${pof.description}
+                <span class="small_listheader">Beskrivning: </span>${pof.description}
                 </div>
             </div>`;
             
@@ -115,7 +115,7 @@ function getWrkexperience() {
     listContainer[0].innerHTML = "";
     //add a list header
     listContainer[0].innerHTML +=
-    `<div class="rowWrapper">
+    `<div class="rowWrapper listheader">
         <div class="col1">
             <b>Arbete:</b>
         </div>
@@ -144,16 +144,16 @@ function getWrkexperience() {
             listContainer[0].innerHTML +=
             `<div class="rowWrapper">
                 <div class="col1">
-                    ${wrk.employer}
+                <span class="small_listheader">Arbete: </span> ${wrk.employer}
                 </div>
                 <div class="col2">
-                    ${wrk.title}
+                <span class="small_listheader">Titel: </span> ${wrk.title}
                 </div>
                 <div class="col3">
-                    ${tmp_startdate}
+                <span class="small_listheader">Start datum: </span> ${tmp_startdate}
                 </div>
                 <div class="col4">
-                    ${tmp_enddate}
+                <span class="small_listheader">Slut datum: </span> ${tmp_enddate}
                 </div>
             </div>`; 
         });

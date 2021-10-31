@@ -127,6 +127,22 @@ footer {
     clear: both;
 }
 
+
+.small_listheader {
+    display: none;
+    font-weight: bold;
+    @include respond(smallerscreen) {
+        display: block;
+    }
+}
+
+.listheader {
+    display: block;
+    @include respond(smallerscreen) {
+        display: none;
+    }
+}
+
 .col1 {
     float: left;
     width: 23%;
@@ -135,7 +151,8 @@ footer {
     padding-left: 1%;
     padding-right: 1%;
     @include respond(smallerscreen) {
-        width: 25%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
@@ -151,7 +168,8 @@ footer {
     padding-left: 1%;
     padding-right: 1%;
     @include respond(smallerscreen) {
-        width: 25%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
@@ -166,7 +184,8 @@ footer {
     padding-left: 1%;
     padding-right: 1%;
     @include respond(smallerscreen) {
-        width: 25%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
@@ -181,7 +200,8 @@ footer {
     padding-left: 1%;
     padding-right: 1%;
     @include respond(smallerscreen) {
-        width: 25%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
@@ -194,7 +214,8 @@ footer {
     width: 30%;
     padding: 10px;
     @include respond(smallerscreen) {
-        width: 33%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
@@ -207,7 +228,8 @@ footer {
     width: 30%;
     padding: 10px; 
     @include respond(smallerscreen) {
-        width: 33%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
@@ -219,7 +241,8 @@ footer {
     width: 30%;
     padding: 10px; 
     @include respond(smallerscreen) {
-        width: 33%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
@@ -309,7 +332,6 @@ footer {
         padding-left: 5px;
         padding-right: 5px;
     }
-    
 }
 
 .adm_col1 {
@@ -317,7 +339,9 @@ footer {
     width: 20%;
     padding: 10px;
     @include respond(smallerscreen) {
-        width: 25%;
+        //width: 25%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
@@ -330,31 +354,39 @@ footer {
     width: 20%;
     padding: 10px; 
     @include respond(smallerscreen) {
-        width: 25%;
+        //width: 25%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
         padding-right: 0px;
     }
 }
+
 .adm_col3 {
     float: left;
     width: 15%;
     padding: 10px; 
     @include respond(smallerscreen) {
-        width: 25%;
+        //width: 25%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
         padding-right: 0px;
     }
 }
+
 .adm_col4 {
     float: left;
     width: 15%;
     padding: 10px; 
     @include respond(smallerscreen) {
-        width: 25%;
+        //width: 25%;
+        display: flex;
+        width: 90%;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
@@ -368,7 +400,9 @@ footer {
     width: 75px;
     @include respond(smallerscreen) {
         float: none;
-        width: 100%
+        //width: 100%
+        display: flex;
+        width: 90%;
     }
     
 }
