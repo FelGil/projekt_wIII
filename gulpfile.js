@@ -5,6 +5,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass')(require('sass'));
 const babel = require("gulp-babel");
 const imagemin = require('gulp-imagemin');
+const cssnano = require('gulp-cssnano');
+const concat = require('gulp-concat');
 
 //Filepaths
 const files = {
@@ -30,6 +32,9 @@ function sassTask() {
     return src(files.sassPath)
         .pipe(sass().on("error", sass.logError))
         .pipe(dest("pub/css"))
+        .pipe(concat('sass.css'))
+        .pipe(cssnano())
+        .pipe(sourcemaps.write('../maps'))
         .pipe(browserSync.stream());
 }
 
