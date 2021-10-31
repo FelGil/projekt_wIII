@@ -34,6 +34,10 @@ let restlink = "https://studenter.miun.se/~fegi2000/writeable/projekt_wiii_ws/ap
 //Get function go get data from education table
 function getEducations() {
 
+    //Set classes on the links to show where we are
+    eduLink.classList.add("visited");
+    pofLink.classList.remove("visited");
+    wrkLink.classList.remove("visited");
     //Show or hide Add new buttons.
     addNewEduDispBtn.style.display = "block";
     addNewPofDispBtn.style.display = "none";
@@ -278,6 +282,11 @@ pofEditBtn.addEventListener('click',updatePof);
 //Get function go get data from portfolio table
 function getPortfolio() {
 
+    //Set classes on the links to show where we are
+    pofLink.classList.add("visited");
+    eduLink.classList.remove("visited");
+    wrkLink.classList.remove("visited");
+
     //Show or hide Add new buttons.
     addNewPofDispBtn.style.display = "block";
     addNewEduDispBtn.style.display = "none";
@@ -501,6 +510,10 @@ wrkEditBtn.addEventListener('click', updateWrk);
 //Function to load Work experience and print it to the listContainer
 function getWrkexperience() {
     
+    //Set classes on the links to show where we are
+    wrkLink.classList.add("visited");
+    pofLink.classList.remove("visited");
+    eduLink.classList.remove("visited");
     //Show or hide Add new buttons.
     addNewWrkDispBtn.style.display = "block";
     addNewPofDispBtn.style.display = "none";
