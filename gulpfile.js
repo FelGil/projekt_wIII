@@ -14,11 +14,6 @@ const files = {
     jsPath: "src/js/*.js",
     imagePath: "src/images/*",
     sassPath: "src/sass/*",
-    imagePath: "src/images/*",
-    //Admin paths
-    adm_phpPath: "src/*.php",
-    //credentials
-    credentialsPath: "src/*.txt"
 }
 
 //html-task: copy all html-files
@@ -55,31 +50,18 @@ function imageTask() {
     .pipe(dest('pub/images'));
 }
 
-//Admin tasks
-//Copy main php giles
-function adm_copyPHP_Task() {
-    return src(files.adm_phpPath)
-    .pipe(dest('pub'));
-}
-
-//copy credentials file
-function copyCredentials_Task() {
-    return src(files.credentialsPath)
-    .pipe(dest('pub'));
-}
-
 //watch-task: check if the files has changed
 function watchTask() {
     browserSync.init({
         server: "./pub"
     });
       
-    watch([files.htmlPath, files.jsPath, files.sassPath, files.jsPath, files.adm_phpPath, files.credentialsPath, files.imagePath], 
-        parallel(copyHTML, jsTask, sassTask, jsTask, adm_copyPHP_Task, copyCredentials_Task,imageTask)).on('change',browserSync.reload);
+    watch([files.htmlPath, files.jsPath, files.sassPath, files.jsPath, files.imagePath], 
+        parallel(copyHTML, jsTask, sassTask, jsTask, imageTask)).on('change',browserSync.reload);
 }
 
 exports.default = series(
-    parallel(copyHTML, sassTask, jsTask, adm_copyPHP_Task,copyCredentials_Task,imageTask),
+    parallel(copyHTML, sassTask, jsTask ,imageTask),
     watchTask
 );
 
